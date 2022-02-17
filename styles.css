@@ -1,0 +1,335 @@
+/* import google font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+
+/* variables con colores*/
+:root{
+    --black: #24292d;
+    --maincolor: #2559e7;
+    --acent: #2559e7;
+    --white: #f0f8ff;
+    --text:#24292d;
+    --cardback:rgba(255,255,255,0.5);
+}
+
+/* ajustes de selectors*/
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+body{
+    background-image: url("images/waves-white.png");
+    background-attachment: fixed;
+    transition: all 0.4s ease;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background: var(--maincolor);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
+    z-index: 100;
+}
+
+h1{
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 100px;
+}
+h2{
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--acent);
+    margin-bottom: 50px;
+}
+h3{
+    color: var(--text);
+    font-weight: 800;
+    line-height: 80px;
+    font-size: 2rem;
+}
+h5{
+    color: var(--text);
+    font-weight: 600;
+}
+p{
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+/* clases navbar*/
+.navbar{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5%;
+    padding: 0 30px;
+    z-index: 100;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: none;
+}
+.home a{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+}
+.sidebar-home{
+    display: none;
+}
+.sidebar-home a{
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+}
+.nav-links li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--white);
+    margin: 0 8px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+.nav-links li a:hover{
+    opacity: 1;
+}
+.darkmode,
+.menu{    
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0.8;
+    font-size: 30px;
+    color: var(--white);
+    padding: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.menu{
+    display: none;
+}
+.bxs-moon, .bx-sun{
+    transition: all 0.3s ease;
+}
+.bx-x{
+    cursor: pointer;
+    opacity: 0.7;
+}
+.icons .darkmode:hover,
+.menu:hover,
+.bx-x:hover{
+    opacity: 1;
+}
+
+
+/* Clases Home*/
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    
+}
+.container .main-text{
+    flex: 1;
+    align-items: center;
+}
+.container .main-img{
+    flex: 1;
+}
+
+.container .main-img img{
+    height: 100%;
+    width: 100%;
+}
+
+/* Clases About */
+
+.about-card{
+    background-color: var(--cardback);
+    border-radius: 5px;
+    box-shadow: 3px 0px 3px 3px rgba(0,0,0,0.3); 
+    margin: auto;
+    display: flex;
+}
+
+.about-card .profile-img{
+    border-radius: 5px 0 0 5px;
+    box-shadow: 3px 0 3px rgba(0,0,0,0.3);    
+    max-width: 500px;
+}
+.about-card .info{
+    padding: 0 70px;
+    margin: auto;
+}
+.about-card .info .text{
+    font-size: 100%;
+    font-weight: 100;
+}
+
+/* clases Works*/
+.works{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.works-grid{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.work-card{
+    background-color: var(--cardback);    
+    border-radius: 5px;
+    box-shadow: 3px 0px 3px 3px rgba(0,0,0,0.3);
+    display: block;
+    flex: 1;
+    flex-basis: 400px;
+}
+.work-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.work-card .info{
+    padding: 30px;
+}
+.card .text{
+    font-size: 100%;
+    font-weight: 100;
+}
+.work-img{
+}
+
+
+/*skills*/
+.skills{
+    text-align: center;
+    display: flex;    
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skills-tittle{
+    text-align: center;
+}
+.skill-img{
+    height: 200px;
+    width: 200px;
+    flex-shrink: 1;
+}
+.skill{
+    color: var(--text);
+    font-size: 15rem;
+}
+
+
+/* ajustes de pantalla*/
+@media (max-width:1100px) {
+    .container{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .main-img{
+        display: none;
+    }
+    .container .main-text{        
+        text-align: center;
+        padding-top: 11em;
+        padding-bottom: 250px;
+    }
+    .about-card{
+        display: block;
+        text-align: center;
+    }
+    .about-card .info{
+        padding: 50px;
+    }
+    .about-card .info .text{
+        text-align: left;
+    }
+    .about-card .profile-img{
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        margin-top: 50px;
+    }
+    .container{
+        height: auto;
+        margin-top: 100px;
+    }
+
+}
+@media (max-width:750px) {
+
+    .navbar{
+        max-width: 100%;
+        margin: 0;
+    }
+    .nav-links{
+        display: block;
+        position: fixed;     
+        background: var(--maincolor);
+        top: 0;
+        left: -100%;
+        max-width: 300px;
+        width: 100%;
+        height: 100%;
+        line-height: 40px;
+        padding: 20px;
+        transition: 0.5s ease;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    }
+    .nav-links li{
+        display: block;
+        margin-top: 20px;
+        box-shadow: 0px 12px 5px -11px rgba(255,255,255,0.3);
+    }
+    .sidebar-home{
+        display: block;
+    }
+    .nav-links .sidebar-home{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-links .sidebar-home span,
+    .nav-links .sidebar-home i{
+        color: var(--white);
+        font-size: 25px;
+        font-weight: 600;        
+    }
+    .menu{
+        display: block;
+    }
+    .container{
+        height: auto;
+        margin-top: 100px;
+    }
+    .skill-img{
+        height: 150px;
+        width: 150px;
+        flex-shrink: 1;
+    }
+
+}
