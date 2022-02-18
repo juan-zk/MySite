@@ -13,6 +13,9 @@ $(".darkmode").click(function () {
         //changin icon 
         $("#switch").addClass("bx-sun");
         $("#switch").removeClass("bxs-moon");
+        //githubbtn        
+        $(".github-btn").addClass("btn-outline-light");
+        $(".github-btn").removeClass("btn-outline-dark");
 
         //changin colors
         $("body").css("background-image", "url('images/waves.png')")
@@ -23,7 +26,9 @@ $(".darkmode").click(function () {
     else {
         $("#switch").addClass("bxs-moon");
         $("#switch").removeClass("bx-sun");
-
+        
+        $(".github-btn").addClass("btn-outline-dark");
+        $(".github-btn").removeClass("btn-outline-light");
 
         $("body").css("background-image", "url('images/waves-white.png')")
         $(":root").css("--maincolor", "#2559e7")
@@ -32,6 +37,12 @@ $(".darkmode").click(function () {
 
     }
 
+})
+
+//hover cards
+$(".work-card").hover(function(e){
+    $(this).find(".work-img").toggleClass("hidden");
+    $(this).find(".info").toggleClass("hidden");
 })
 
 //revelar cosas
