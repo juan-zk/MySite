@@ -44,7 +44,3 @@ $(".work-card").hover(function(e){
     $(this).find(".work-img").toggleClass("hidden");
     $(this).find(".info").toggleClass("hidden");
 })
-
-//revelar cosas
-ScrollReveal().reveal('.container', { delay: 300, scale:0.5});
-ScrollReveal().reveal('.work-card', { interval: 300, scale:0.3 });
